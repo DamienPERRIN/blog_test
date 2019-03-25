@@ -6,7 +6,7 @@
 
         <title>Home</title>
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-//        <link rel="stylesheet" href="sass/app.scss">
+        {{-- <link rel="stylesheet" href="sass/app.scss"> --}}
 
     </head>
     <body>
@@ -33,6 +33,13 @@
                 <div class="links">
                     <a href="https://github.com/DamienPERRIN?tab=repositories">Mon GitHub</a>
                 </div>
+                <h2>Formulaire de contact pour {{ $name }}</h2>
+                <form class="" method="POST" action="/">
+                    @csrf
+                    <input type="text" placeholder="Nom">
+                    <input type="text" placeholder="Prénom">
+                    <input type="submit">
+                </form>
             </div>
         </div>
         <footer>
