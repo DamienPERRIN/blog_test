@@ -8,6 +8,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="resources/js/smooth_scroll.js"></script>
 
         <!-- Styles -->
         <style>
@@ -83,7 +85,7 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-                <form method="get" action="{{ asset('home_page') }}" style="margin-bottom: 50px">
+                <form method="get" action="{{ route('home') }}" style="margin-bottom: 50px">
                     <button type="submit">To home_page</button>
                 </form>
                 <div class="links">
@@ -95,7 +97,9 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <a href="#landing_page">Aller vers la Landing Page</a>
             </div>
         </div>
+        @include('homePage', ['name' => 'Damien'])
     </body>
 </html>

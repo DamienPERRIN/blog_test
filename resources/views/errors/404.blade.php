@@ -8,7 +8,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script "{{ asset(js.smooth_scroll) }}"></script>
         <!-- Styles -->
         <style>
             html, body {
@@ -69,7 +70,7 @@
                 <div class="title m-b-md">
                     The page your looking for is not available
                 </div>
-                <form method="get" action="/">
+                <form method="get" action="{{ route('welc') }}">
                     <button type="submit" style="padding: 10px">Come back to the main screen</button>
                 </form>
             </div>

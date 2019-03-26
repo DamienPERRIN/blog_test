@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Middleware\CheckAge;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,13 +17,9 @@ Route::any('/', function () {
     return view('welcome');
 })->name('welc');
 
-//Route::match(['get', 'post'], '/home_page', function () {
-//    return view('homePage');
-//});
-
-//Route::redirect('/', '/home_page');
-
-Route::view('/home_page', 'homePage', ['name' => 'Damien'])->name('home');
+Route::view('/home_page', 'homePage', [
+    'name' => 'Damien'
+])->name('home')->middleware(CheckAge::class);
 
 Route::get('user/{name}', function($name = null) {
         return $name;
@@ -43,12 +41,19 @@ Route::prefix('home_page')->group(function () {
     });
 });
 
+Route::get('/user', 'dperrin@alteca.fr');
+
+//Route::match(['get', 'post'], '/home_page', function () {
+//    return view('homePage');
+//});
+
+//Route::redirect('/', '/home_page');
+
 // exemple de route avec un paramêtre
 //Route::get('user/{id}', function ($id) {
 //    return 'User '.$id;
 //});
 
-Route::get('/user', 'dperrin@alteca.fr');
 
 //Route::fallback(function () {
 //    return redirect()->route('404');

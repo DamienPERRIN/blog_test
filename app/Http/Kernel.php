@@ -1,5 +1,7 @@
 <?php
 
+/* mechanism for filtering HTTP requests entering your application */
+
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
