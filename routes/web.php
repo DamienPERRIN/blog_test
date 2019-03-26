@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::any('/', function () {
     return view('welcome');
 })->name('welc');
 
@@ -50,6 +50,6 @@ Route::prefix('home_page')->group(function () {
 
 Route::get('/user', 'dperrin@alteca.fr');
 
-Route::fallback(function () {
-    return redirect()->route('welc');
-});
+//Route::fallback(function () {
+//    return redirect()->route('404');
+//});
