@@ -1,10 +1,17 @@
-$(function() {
-    function scrollTo( target ) {
-            if( target.length ) {
-                $("html, body").stop().animate( { scrollTop: target.offset().top }, 1500);
-            }
-    }
-    scrollTo( $("#landing_page") );
+//window.alert('Bonjour Damien !');
 
-    $("html, body").animate({scrollTop : 0}, 1500);
+$("a[href^='#']").click(function(e) {
+	e.preventDefault();
+
+	var position = $($(this).attr("href")).offset().top;
+
+	$("html, body").animate({
+		scrollTop: position
+	}, 1000 );
 });
+
+console.log(top)
+
+//$("html, body").animate({scrollTop : 0}, 1500);
+
+

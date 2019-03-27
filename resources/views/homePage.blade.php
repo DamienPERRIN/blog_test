@@ -31,9 +31,10 @@
             <input type="submit">
         </form>
     </div>
-    <button class="" type="button">TOP</button>
 </div>
-<footer>
-    <p>@ 2019 Damien</p>
+<footer class="page-footer font-small">
+    <div class="footer-copyright text-center py-3">
+        © 2019 Copyright: DamienPERRIN
+    </div>
 </footer>
 
