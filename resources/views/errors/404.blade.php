@@ -70,7 +70,7 @@
                 <div class="title m-b-md">
                     The page your looking for is not available
                 </div>
-                <form method="get" action="{{ route('welc') }}">
+                <form method="get" action="{{ route('layout') }}">
                     <button type="submit" style="padding: 10px">Come back to the main screen</button>
                 </form>
             </div>

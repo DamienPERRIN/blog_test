@@ -10664,3 +10664,10 @@ body {
   background-color: #b266b2;
 }
 
+.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
+

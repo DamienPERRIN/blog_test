@@ -21,9 +21,13 @@ Route::view('/home_page', 'homePage', [
     'name' => 'Damien'
 ])->name('home')->middleware(CheckAge::class);
 
-Route::get('user/{name}', function($name = null) {
-        return $name;
-    })->where(['name' => '[a-z]+']);  // Expression régulière
+// UserController.php
+
+Route::resource('users', 'UserController');
+
+//Route::get('user/{name}', function($name = null) {
+//        return $name;
+//    })->where(['name' => '[a-z]+']);  // Expression régulière
 
 Route::middleware(['first', 'second'])->group(function () {
     Route::get('/first', function () {
@@ -40,8 +44,6 @@ Route::prefix('home_page')->group(function () {
         // Matches The "/home_page/user" URL
     });
 });
-
-Route::get('/user', 'dperrin@alteca.fr');
 
 //Route::match(['get', 'post'], '/home_page', function () {
 //    return view('homePage');
