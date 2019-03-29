@@ -25,6 +25,8 @@ Route::view('/home_page', 'homePage', [
 
 Route::resource('users', 'UserController');
 
+Route::post('mail', 'ContactController@sendmail');
+
 //Route::get('user/{name}', function($name = null) {
 //        return $name;
 //    })->where(['name' => '[a-z]+']);  // Expression régulière

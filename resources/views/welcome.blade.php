@@ -35,13 +35,18 @@
             <div class="links">
                 <a href="https://github.com/DamienPERRIN?tab=repositories">Mon GitHub</a>
             </div>
-            <h2>Formulaire de contact pour </h2>
-            <form id="" method="POST" action="/">
-                {{-- @csrf --}}
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input type="text" placeholder="Nom">
-                <input type="text" placeholder="Prénom">
-                <input type="submit">
+            <h2>Formulaire de contact pour l'envoi d'un mail</h2>
+                <form id="" method="POST" action="/mail">
+                    @csrf
+                    <div class="row input-group mb-3">
+                        <input type="text" placeholder="Nom">
+                        <input type="text" placeholder="Prénom">
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="row input-group">
+                        <textarea class="form-control" aria-label="With textarea" placeholder="Que voulez-vous dire ?"></textarea>
+                    </div>
+                    <input type="submit">
             </form>
         </div>
     </div>
